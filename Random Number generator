@@ -1,0 +1,6 @@
+import random
+ 
+n=0
+while(n<1000):
+    print(random.randint(0, 10))
+    n+=1
