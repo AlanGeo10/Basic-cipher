@@ -1,0 +1,24 @@
+def encrypt():
+    
+    #enter your message(string) below
+    en_message = input("Enter the message i.e to be encrypted: ").strip()
+    
+    letters="abcdefghijklmnopqrstuvwxyz"
+    
+    #enter the key value
+    k = int(input("Enter the key to encrypt: "))
+    encrypted_message = ""
+
+    for ch in en_message:
+
+        if ch in letters:
+            position = letters.find(ch)
+            new_pos = (position + k) % 26  #do - k for decry.
+            new_char = letters[new_pos]
+            encrypted_message += new_char
+        else:  #for space
+            encrypted_message += ch
+    print("Your encrypted message is:\n")
+    print(encrypted_message)
+
+encrypt()
